@@ -6,6 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx modules/01-redis-fundamentals/src/index.ts",
+    "module:02": "tsx modules/02-redis-data-structures/src/index.ts",
+    "test:module2": "vitest run modules/02-redis-data-structures/tests",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
