@@ -1,0 +1,24 @@
+{
+  "name": "redis-production-engineering-lab",
+  "version": "1.0.0",
+   "private": true,
+  "description": "Hands-on Redis production engineering with Node.js and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx modules/01-redis-fundamentals/src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "redis:cli": "docker compose exec redis redis-cli"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "ioredis": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
