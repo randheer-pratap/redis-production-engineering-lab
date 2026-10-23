@@ -1,13 +1,15 @@
 {
   "name": "redis-production-engineering-lab",
   "version": "1.0.0",
-   "private": true,
+  "private": true,
   "description": "Hands-on Redis production engineering with Node.js and TypeScript",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx modules/01-redis-fundamentals/src/index.ts",
     "module:02": "tsx modules/02-redis-data-structures/src/index.ts",
     "test:module2": "vitest run modules/02-redis-data-structures/tests",
+    "module:03": "tsx watch modules/03-redis-integration/src/server.ts",
+    "test:module3": "vitest run modules/03-redis-integration/src/tests",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -15,9 +17,11 @@
   },
   "dependencies": {
     "dotenv": "^18.0.8",
+    "express": "^5.3.0",
     "ioredis": "^6.0.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
